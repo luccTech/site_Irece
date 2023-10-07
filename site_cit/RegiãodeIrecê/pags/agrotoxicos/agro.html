@@ -135,7 +135,7 @@
                             <clipPath id="clip-path">
                             <path d="M89.479,0.180 L512.635,25.932 C568.395,29.326 603.115,76.927 590.357,129.078 L528.827,380.603 C518.688,422.048 472.661,448.814 427.190,443.300 L73.350,400.391 C32.374,395.422 -0.267,360.907 -0.002,322.064 L1.609,85.154 C1.938,36.786 40.481,-2.801 89.479,0.180 Z"></path>
                             </clipPath>
-                            <image clip-path="url(#clip-path)" xlink:href="../../images/Irecê_Ba.jpg" width="100%"
+                            <image clip-path="url(#clip-path)" xlink:href="../../images/agrotoxicos.jpg" width="100%"
                             height="465" class="svg__image"></image>
                             </svg>
                     </div>
@@ -173,12 +173,68 @@
     });
 </script>
 
+<div class="container-fluid gtco-feature" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="cover">
+                    <div class="card">
+                        <svg
+                            class="back-bg"
+                            width="100%" viewBox="0 0 900 700" style="position:absolute; z-index: -1">
+                            <defs>
+                            <linearGradient id="PSgrad_01" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
+                                <stop offset="0%" stop-color="rgb(1,230,248)" stop-opacity="1"/>
+                                <stop offset="100%" stop-color="rgb(29,62,222)" stop-opacity="1"/>
+                            </linearGradient>
+                            </defs>
+                            <path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_01)"
+                            d="M616.656,2.494 L89.351,98.948 C19.867,111.658 -16.508,176.639 7.408,240.130 L122.755,546.348 C141.761,596.806 203.597,623.407 259.843,609.597 L697.535,502.126 C748.221,489.680 783.967,441.432 777.751,392.742 L739.837,95.775 C732.096,35.145 677.715,-8.675 616.656,2.494 Z"/>
+                            </svg>
 
-<p>A fertilidade do solo, essencial para a produção agrícola, também é afetada negativamente pelo uso indiscriminado de agrotóxicos, que elimina microrganismos benéficos e diminui a qualidade do solo. </p>
+                            <svg width="100%" viewBox="0 0 700 500">
+                            <clipPath id="clip-path">
+                            <path d="M89.479,0.180 L512.635,25.932 C568.395,29.326 603.115,76.927 590.357,129.078 L528.827,380.603 C518.688,422.048 472.661,448.814 427.190,443.300 L73.350,400.391 C32.374,395.422 -0.267,360.907 -0.002,322.064 L1.609,85.154 C1.938,36.786 40.481,-2.801 89.479,0.180 Z"></path>
+                            </clipPath>
+                            <image clip-path="url(#clip-path)" xlink:href="../../images/agrotoxicos-3.jpg" width="100%"
+                            height="465" class="svg__image"></image>
+                            </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h2> Formas de reduzir o uso excessivo de agrotóxicos: </h2>
+                <p class="justificar-texto"> 
+                    A fertilidade do solo, essencial para a produção agrícola, também é afetada negativamente pelo uso indiscriminado de agrotóxicos, que elimina microrganismos benéficos e diminui a qualidade do solo.
+                    
+                    <br><br>No entanto, existem soluções viáveis para enfrentar esse problema. Métodos como o controle biológico, que utiliza organismos vivos para controlar pragas de forma natural, e a agroecologia, que adota uma abordagem holística para a agricultura, promovendo a agricultura orgânica e tecnologias limpas, podem reduzir significativamente a dependência de agrotóxicos.
 
-<p>No entanto, existem soluções viáveis para enfrentar esse problema. Métodos como o controle biológico, que utiliza organismos vivos para controlar pragas de forma natural, e a agroecologia, que adota uma abordagem holística para a agricultura, promovendo a agricultura orgânica e tecnologias limpas, podem reduzir significativamente a dependência de agrotóxicos. </p>
+                    <div id="conteudo2" class="conteudo-escondido">
+                        O Manejo Integrado de Pragas (MIP) é outra abordagem importante, que envolve práticas sustentáveis para controlar pragas sem a necessidade de agrotóxicos. Isso inclui a rotação de culturas, o tratamento de sementes e o monitoramento das pragas.
 
-<p>O Manejo Integrado de Pragas (MIP) é outra abordagem importante, que envolve práticas sustentáveis para controlar pragas sem a necessidade de agrotóxicos. Isso inclui a rotação de culturas, o tratamento de sementes e o monitoramento das pragas. </p>
+                        <br><br>É fundamental adotar práticas mais sustentáveis na agricultura para reduzir o uso excessivo de agrotóxicos. Isso protegerá a saúde humana, preservará o meio ambiente, manterá a fertilidade do solo e garantirá a sustentabilidade da agricultura no longo prazo. A transição para métodos de manejo mais ecológicos é essencial para o bem-estar das futuras gerações e para a preservação do nosso planeta.
+                    </div>
+                    <button id="lerMaisBtn2">Ler Mais</button>
+                </p>
+                <a href="../../index.html">início<i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>É fundamental adotar práticas mais sustentáveis na agricultura para reduzir o uso excessivo de agrotóxicos. Isso protegerá a saúde humana, preservará o meio ambiente, manterá a fertilidade do solo e garantirá a sustentabilidade da agricultura no longo prazo. A transição para métodos de manejo mais ecológicos é essencial para o bem-estar das futuras gerações e para a preservação do nosso planeta. </p>
+<script>
+    const conteudo2 = document.getElementById('conteudo2');
+    const lerMaisBtn2 = document.getElementById('lerMaisBtn2');
+
+    lerMaisBtn2.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (conteudo2.style.display === 'none' || conteudo2.style.display === '') {
+            conteudo2.style.display = 'block';
+            lerMaisBtn2.textContent = 'Ler Menos';
+        } else {
+            conteudo2.style.display = 'none';
+            lerMaisBtn2.textContent = 'Ler Mais';
+        }
+    });
+</script>
 
