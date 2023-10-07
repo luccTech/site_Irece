@@ -1130,12 +1130,11 @@
         if (this._config.toggle) {
           this.toggle();
         }
-      } // Getters
+      }
 
 
       var _proto = Collapse.prototype;
 
-      // Public
       _proto.toggle = function toggle() {
         if ($$$1(this._element).hasClass(ClassName.SHOW)) {
           this.hide();
