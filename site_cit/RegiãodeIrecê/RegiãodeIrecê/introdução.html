@@ -190,13 +190,79 @@
                                 </p>
                             </div>
                         </div>
-                        <a href="index.html">início<i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="container-fluid gtco-feature" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="cover">
+                    <div class="card">
+                        <svg
+                            class="back-bg"
+                            width="100%" viewBox="0 0 900 700" style="position:absolute; z-index: -1">
+                            <defs>
+                            <linearGradient id="PSgrad_01" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
+
+                            </linearGradient>
+                            </defs>
+                            <path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_01)"
+                            d="M616.656,2.494 L89.351,98.948 C19.867,111.658 -16.508,176.639 7.408,240.130 L122.755,546.348 C141.761,596.806 203.597,623.407 259.843,609.597 L697.535,502.126 C748.221,489.680 783.967,441.432 777.751,392.742 L739.837,95.775 C732.096,35.145 677.715,-8.675 616.656,2.494 Z"/>
+                            </svg>
+
+                            <svg width="100%" viewBox="0 0 700 500">
+                            <clipPath id="clip-path">
+                            <path d="M89.479,0.180 L512.635,25.932 C568.395,29.326 603.115,76.927 590.357,129.078 L528.827,380.603 C518.688,422.048 472.661,448.814 427.190,443.300 L73.350,400.391 C32.374,395.422 -0.267,360.907 -0.002,322.064 L1.609,85.154 C1.938,36.786 40.481,-2.801 89.479,0.180 Z"></path>
+                            </clipPath>
+                            <image  xlink:href="images/plato.png" width="100%"
+                            height="465" class="svg__image"></image>
+                            </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h2> Platô carstico. </h2>
+                <p class="justificar-texto"> 
+                    O território de Irecê está localizado em relevos planos esculpidos por rochas carbonáticas neoproterozóicas, sobre um aquífero subterrâneo: o Platô Cárstico de Irecê. O aquífero se localiza na região central do estado da Bahia e as rochas carbonáticas a ele associados estão vinculados a uma deformação compressional brasiliana, cuja morfologia do sistema cáustico é caracterizada por elevada densidade de dolinas, maior espessura de solos e vales profundos, principalmente na porção central do aquífero (Irecê/Lapão) (OLIVEIRA, Sandro. 2007). 
+
+                    <div id="conteudo2" class="conteudo-escondido">
+                        <p class="justificar-texto">O aquífero é resultado de fraturas criadas com a dissolução do carbonato pela água, resultando na formação de rios subterrâneos que alimentam as calhas dos rios Verde, Jacaré e seus afluentes, com um platô de altitude média de 800m. O uso exacerbado dessas águas na perfuração inadequada de poços, utilizados em grandes escalas para atender as demandas agrícolas da região, tem tido como resultado o rebaixamento do aquífero em cerca de 1,0 m por ano ao longo das últimas décadas (Silva 1973, Ramos 2005), além da poluição de suas águas e a diminuição da vazão dos rios territoriais. 
+ 
+
+                        <br><br>Segundo o Plano Estadual de Combate à Desertificação e Mitigação dos Efeitos da Seca (PAE/ BA), o Pólo de Irecê apresenta 50% de sua área imprópria ao consumo humano devido à superexploração, grande parte por poços clandestinos e poucos outorgados, e liberação de esgotamento sanitário no aquífero cárstico. </p>
+                    </div>
+                    <button id="lerMaisBtn2">Ler Mais</button>
+                </p>
+                <a href="../../index.html">início<i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const conteudo2 = document.getElementById('conteudo2');
+    const lerMaisBtn2 = document.getElementById('lerMaisBtn2');
+
+    lerMaisBtn2.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (conteudo2.style.display === 'none' || conteudo2.style.display === '') {
+            conteudo2.style.display = 'block';
+            lerMaisBtn2.textContent = 'Ler Menos';
+        } else {
+            conteudo2.style.display = 'none';
+            lerMaisBtn2.textContent = 'Ler Mais';
+        }
+    });
+</script>
+
+
 
 
 
