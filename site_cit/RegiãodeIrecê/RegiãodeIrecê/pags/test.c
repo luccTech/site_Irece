@@ -13,7 +13,7 @@ void jogo1(){
     // Define codificação e saída como sendo UTF-8
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    int nivelRio = 50; // Nível inicial do rio
+    int nivelRio = 100; // Nível inicial do rio
     int populacao = 1000; // População inicial da região
     int pontuacao = 0;
     char jogador [100];
@@ -35,7 +35,7 @@ void jogo1(){
     system("pause");
     system("cls");
 
-    while (nivelRio > 0 && nivelRio < 100) {
+    while (nivelRio > 0 && nivelRio < 150) {
 
         printf("\nNível atual do rio: %d\n", nivelRio);
         printf("------------------------\n");
@@ -220,8 +220,8 @@ void jogo2(){
     system("cls");
     printf("=====================================================================================================================================================================\n");
     printf("%s!!! Você é o responsável por manter o ecossistema aquático.\n",nome);
-    printf("\nGerencie o seu ecossistema de forma consciente e responsável.\n");
-    printf("Seu objetivo é manter o ecossistema em equilíbrio\n não deixe o nível de poluição chegar a 100 e óbvio, garanta uma boa vida para os seres\n");
+    printf("\n Gerencie o seu ecossistema de forma consciente e responsável.\n");
+    printf("Seu objetivo é manter o ecossistema em equilíbrio\n não deixe o nível de poluição chegar a 100 e óbvio, garanta uma boa qualidade de vida para os seres\n");
     printf("=====================================================================================================================================================================\n");
     system("pause");
     system("cls");
@@ -255,10 +255,8 @@ void jogo2(){
                     poluicao +=30;
                     pontuacao -=20;
 
-                    printf("Você aumentou a poluição na água, por conta do mal descarte de resíduos. A população odiou, acarreta em mais esgoto\n");
-                } else {
-                    printf("Os rios já estão muito poluidos não é possível fazer mais nenhum descarte .\n");
-                }
+                    printf("Você aumentou a poluição na água, por conta do mal descarte de resíduos, acarretando em mais esgoto e menores chances de vida aquática\n");
+                } 
                 break;
             case 2: system("cls");
                 vida += 20;
@@ -281,10 +279,10 @@ void jogo2(){
 
             case 4: system("cls");
 
-                    vida += 10;
-                    poluicao -=10;
-                    pontuacao +=10;
-                    printf("Você tratou o esgoto da cidade, a população gostou muito! Porém foi preciso o gasto de água.  \n");
+                    vida += 30;
+                    poluicao -=30;
+                    pontuacao +=30;
+                    printf("Você tratou o esgoto da cidade, animais e pessoas que consomem dessa fonte estão em melhores condições graças a sua ação! \n");
                     break;
                 
             case 6: system("cls");
@@ -358,7 +356,6 @@ void jogo2(){
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
 
-
     }
 void jogo3(){
 	// Define o valor das páginas de código UTF8 e default do Windows
@@ -392,29 +389,13 @@ void jogo3(){
         printf("\nNível atual de água: %d\n", agua);
         printf("Qualidade atual do solo: %d\n\n", solo);
         printf("Escolha uma ação:\n\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
-        printf("1. | Irrigar as plantações |  | custo: -20 de água |  |benefício: +10 de solo |\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
-        printf("2. | Aplicar fertilizantes |  | custo: -30 de água |  |benefício: +20 de solo |\n");
-        printf("   -------------------------  ----------------------   ------------------------\n");
-        printf("3. | Utilizar técnicas de  |  | custo: -10 de água |  |benefício: +5 de solo, |\n");
-        printf("   |agricultura sustentável|                          |      +5 de água       |\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
-        printf("4. | Plantar sem descanso  |  | custo: -40 de agua |  |beneficío: +5 de solo, |\n");
-        printf("   |      de solo          |  |    - 30 solo       |  |        +5 agua        |\n");
-        printf("   -------------------------  ----------------------  ------------------------|\n");
-        printf("5. |     Plantar tomate    |  | custo: -20 de água |  |benefício: -40 de solo |\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
-        printf("6. |     Plantar milho     |  | custo: -20 de água |  |benefício: +40 de solo |\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
-        printf("7. |     Plantar mamona    |  | custo: -20 de água |  |benefício: +30 de solo |\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
-        printf("8. |     Plantar cebola    |  | custo: -20 de água |  |benefício: -30 de solo |\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
-        printf("9. |    Plantar cenoura    |  | custo: -20 de água |  |benefício: -20 de solo |\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
-        printf("10.|     Plantar feijão    |  | custo: -20 de água |  |benefício: +30 de solo |\n");
-        printf("   -------------------------  ----------------------  -------------------------\n");
+        printf("1.  Irrigar as plantações \n");
+        printf("2.  Uso de fertilizantes ");
+        printf("3. Utilizar a técnica de calagem \n");
+        printf("4.  Plantar todo ano    n");
+        printf("5.  Plantar grãos e cereais     \n");
+        printf("6. Plantar raízes \n");
+        printf("7. Usar adubos orgânicos    \n");
         printf("0. Encerrar o jogo\n");
 
         int escolha;
@@ -422,10 +403,10 @@ void jogo3(){
 
         switch (escolha) {
             case 1:
-                if (agua >= 20) {
-                    agua -= 20; 
-                    solo += 10;
-                    printf("Você irrigou as plantações.\n");
+                if (agua >= 30) {
+                    agua -= 30; 
+                    solo += 20;
+                    printf("Você irrigou sua fazenda houve um grande gasto de água, mas em breve você colherá seus alimentos.\n");
                 } else {
                     printf("Você não tem água suficiente para irrigar.\n");
                 }
@@ -434,20 +415,18 @@ void jogo3(){
                 if (agua >= 30) {
                     agua -= 30;
                     solo += 20;
-                    printf("Você aplicou fertilizantes.\n");
+                    printf("Você aplicou fertilizantes isso ajudou o solo, mas tome cuidado com o processo de acidificação.\n");
                 } else {
-                    printf("Você não tem água suficiente para aplicar fertilizantes.\n");
+                    printf("Essa área já está ácida e inativa para plantação.\n");
                 }
                 break;
             case 3:
                 if (agua >= 10) {
                     agua -= 10;
-                    solo += 5;
-                    agua += 5;
-                    printf("Você usou técnicas de agricultura sustentável.\n");
-                } else {
-                    printf("Você não tem água suficiente para usar técnicas de agricultura sustentável.\n");
-                }
+                    solo += 30;
+                    agua += 30;
+                    printf("A calagem do solo é um processo de correção tanto do pH como de, neutralização do alumínio e, elevam os teores de cálcio e magnésio do solo .\n");
+                } 
                 break;
             case 4:
                 if (agua >= 40, solo >= 30) {
@@ -455,71 +434,38 @@ void jogo3(){
                     solo -= 30;
                     solo += 5;
                     agua += 5;
-                    printf("Cuidado para não esgotar seu solo, tome cuidado!\n");
+                    printf("O uso continuo do solo sem um descanso é altamente perigoso, cuidado para não esgotar seu solo, tome cuidado! \n");
                 } else {
                     printf("Você esgotou os nutrientes do seu solo.\n");
                 }
                 break;
             case 5:
-                if (agua >= 20) {
+                if (solo >= 20) {
                     agua -= 20;
-                    solo -= 40;
-    
-                    printf("Cuidado para não esgotar seu solo, tome cuidado!\n");
+                    solo += 40;
+                    printf("Você sabia que a melhor escolha para uma plantação que não desgaste tanto o solo, é optar por grãos e cerais? Eles requerem menos nutrientes do solo e alguns, ate ajudam na estabilidade do solo\n");
                 } else {
-                    printf("Você esgotou os nutrientes do seu solo.\n");
+                    printf("Nutrientes insulficintes.\n");
                 }
                 break;
             case 6:
                 if (agua >= 20) {
                     agua -= 20;
-                    solo += 40;
+                    solo -= 40;
 
-                    printf("Cuidado para não esgotar seu solo, tome cuidado!\n");
+                    printf("Você sabia que as espécies de raízes são mais prejudiciais ao solo?  Por conta da necessidade dos nutrientes, eles requerem mais que outras espécies, assim aabam desgastando o solo com mais facilidade. \n");
                 } else {
                     printf("Você esgotou os nutrientes do seu solo.\n");
                 }
                 break;
             case 7:
                 if (agua >= 20) {
-                    agua -= 20;
+                    agua -= 10;
                     solo += 30;
 
-                    printf("Cuidado para não esgotar seu solo, tome cuidado!\n");
-                } else {
-                    printf("Você esgotou os nutrientes do seu solo.\n");
-                }
+                    printf("Otima escolha o uso de adubos orgânicos sempre será a melhor escolha, parabéns!\n");
+                } 
                 break; 
-            case 8:
-                if (agua >= 20) {
-                    agua -= 20;
-                    solo -= 30;
-
-                    printf("Cuidado para não esgotar seu solo, tome cuidado!\n");
-                } else {
-                    printf("Você esgotou os nutrientes do seu solo.\n");
-                }
-                break; 
-            case 9:
-                if (agua >= 20) {
-                    agua -= 20;
-                    solo -= 20;
-
-                    printf("Cuidado para não esgotar seu solo, tome cuidado!\n");
-                } else {
-                    printf("Você esgotou os nutrientes do seu solo.\n");
-                }
-                break;
-            case 10:
-                if (agua >= 20) {
-                    agua -= 20;
-                    solo += 30;
-
-                    printf("Cuidado para não esgotar seu solo, tome cuidado!\n");
-                } else {
-                    printf("Você esgotou os nutrientes do seu solo.\n");
-                }
-                break;                          
             case 0:
                 printf("Jogo encerrado. Sua pontuação final: %d pontos.\n", pontuacao);
                 return 0;
@@ -529,9 +475,6 @@ void jogo3(){
         system("pause");
         system("cls");
 
-        // Simular o uso de água e a perda de qualidade do solo
-        agua -= rand() % 10;
-        solo -= rand() % 10;
 
         // Verificar se a fazenda falhou devido à falta de recursos
         if (agua <= 0 || solo <= 0) {
@@ -789,123 +732,6 @@ void jogo4(){
     SetConsoleOutputCP(CPAGE_DEFAULT);
 }
 
-void jogo5(){
-	UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8);
-
-    srand(time(NULL));  // Inicializa a semente para números aleatórios
-
-    float ph_alvo = (float)(rand() % 14);  // Gera um pH alvo entre 0 e 14
-    float ph_atual = 7.0;  // O pH inicial é 7 (neutro)
-    int escolha;
-    char jogador [200];
-    int restante = 10;
-    int tentativas = 1;
-
-
-    system("cls");
-
-    printf("     ====================================================================\n");
-    printf("                  Bem vindo ao laboratório ácidos-bases!\n");
-    printf("     ====================================================================\n\n");
-    printf("Digite seu nome:");
-    scanf("%s", jogador);
-    system("pause");
-    system("cls");
-
-    printf("=====================================================================================================================================================================\n");
-    printf("=====================================================================================================================================================================\n");
-    printf("-Olá Sr./sra. %s! É muito bom ver que você tenha chegado. Como essa seja sua primeira vez aqui no laboratório serei seu monitor e lhe ajudarei com suas atividaes.\n\n", jogador);
-    printf("\n-É muito simples, seu trabalho aqui é atingir o valor de pH definido fazendo uso dos elementos químicos disponíveis em nosso laboratório\n\n");
-    printf("\n-Para isso basta você digitar o numero que corresponde ao elemento escolhido, lembre-se que acídos diminuem o ph enquanto acidos aumentam o pH\n\n");
-    printf("=====================================================================================================================================================================\n");
-    printf("=====================================================================================================================================================================\n");
-    system("pause");
-    system("cls");
-
-    while (tentativas <= 10 && ph_atual != ph_alvo) {
-    printf("Seu objetivo é atingir um pH de %g.\n", ph_alvo);
-    printf("pH atual da solução: %g\n", ph_atual);
-    printf("Tentativas restantes: %d\n", restante);
-    printf("Escolha uma ação:\n");
-
-        printf("--------------------------------   ---------------------------------------\n");
-        printf("          Ácidos:                               Bases:\n");
-        printf("--------------------------------   ---------------------------------------\n");
-        printf("| 1. + HCl (Ácido Clorídrico)  |   | 6. +  NaOH(Hidróxido de Sódio)      |\n");
-        printf("--------------------------------   ---------------------------------------\n");
-        printf("| 2. + CH3COOH (Ácido Acético) |   | 7. + KOH(Hidróxido de Potássio)     |\n");
-        printf("--------------------------------   ---------------------------------------\n");
-        printf("| 3. + H2SO4 (Ácido Sulfúrico) |   | 8. + NH4OH (Hidróxido de Amônio)    |\n");
-        printf("--------------------------------   ---------------------------------------\n");
-        printf("| 4. + C6H8O7 (Ácido Cítrico)  |   | 9. + Mg(OH)2 (Hidróxido de Magnésio)|\n");
-        printf("--------------------------------   ---------------------------------------\n");
-        printf("| 5. + H3PO4 (Ácido Fosfórico) |   | 10. + Ca(OH)2 (Hidróxido de Cálcio) |\n");
-        printf("--------------------------------   ---------------------------------------\n");
-        printf("0. Sair do jogo\n");
-
-        int escolha;
-        scanf("%d", &escolha);
-
-        switch (escolha) {
-            case 1:
-                    ph_atual -= 1; // Adicionar HCl diminui o pH
-                    break;
-                case 2:
-                    ph_atual -= 2; // Adicionar CH3COOH aumenta o pH
-                    break;
-                case 3:
-                    ph_atual -= 3; // Adicionar NaOH aumenta o pH
-                    break;
-                case 4:
-                    ph_atual -= 4; // Adicionar KOH aumenta o pH
-                    break;
-                case 5:
-                    ph_atual -= 5; // Adicionar KOH aumenta o pH
-                    break;
-                case 6:
-                    ph_atual += 1; // Adicionar KOH aumenta o pH
-                    break;
-                case 7:
-                    ph_atual += 2; // Adicionar KOH aumenta o pH
-                    break;
-                case 8:
-                    ph_atual += 3; // Adicionar KOH aumenta o pH
-                    break;
-                case 9:
-                    ph_atual += 4; // Adicionar KOH aumenta o pH
-                    break;
-                case 10:
-                    ph_atual += 5; // Adicionar KOH aumenta o pH
-                    break;
-                case 0:
-                printf("Obrigado por jogar!\n");
-                system("pause");
-                return 0;
-            default:
-                printf("Escolha inválida. Tente novamente.\n");
-        }
-
-        tentativas++;
-        restante--;
-        system("pause");
-        system("cls");
-
-        if (ph_atual == ph_alvo) {
-            printf("\nParabéns! Você alcançou o pH-alvo %.g.\n\n\n", ph_alvo);
-            system("pause");
-            system("cls");
-            return 0;
-        }
-    }
-
-    if (restante == 0 && ph_atual != ph_alvo) {
-        printf("\nInfelizmente você não conseguiu. Tente novamente!\n");
-        system("pause");
-    }
-    SetConsoleOutputCP(CPAGE_DEFAULT);
-}
 
 int main(){
 	
@@ -934,8 +760,6 @@ int main(){
         printf("-----  ---------------------------------------\n");
         printf("| 4 |  |  Jogo de Sustentabilidade hídrica!  |\n");
         printf("-----  ---------------------------------------\n");
-        printf("| 5 |  |        Jogo de Balança de pH!       |\n");
-        printf("-----  ---------------------------------------\n");
 
         scanf("%d", &jogo);
 			if(jogo==1)
@@ -947,8 +771,6 @@ int main(){
 			if(jogo==4)
 		jogo4();
 			if(jogo==5)
-		jogo5();
-		    if (jogo==0)
 		printf("joguinhos finalizado");
 	}
 
