@@ -750,28 +750,25 @@ int main(){
 	
 	while(jogo!=0){
         system("cls");
-		printf("Digite de 1 a 5 para acessar os joguinhos ou digite 0 para finalizar a sessão em joguinhos.\n\n");
+		printf("Digite de 1 a 4 para acessar os mini jogos ou digite 0 para finalizar a sessão em joguinhos.\n\n");
         printf("-----  ---------------------------------------\n");
 		printf("| 1 |  | Jogo de Problemas hídricos em Irecê!|\n");
         printf("-----  ---------------------------------------\n");
-		printf("| 2 |  |     Jogo de Ecossistema aquatico!   |\n");
+		
+        printf("| 2 |  |   Jogo de Agricultura sustentável!  |\n");
         printf("-----  ---------------------------------------\n");
-        printf("| 3 |  |   Jogo de Agricultura sustentável!  |\n");
-        printf("-----  ---------------------------------------\n");
-        printf("| 4 |  |  Jogo de Sustentabilidade hídrica!  |\n");
+        printf("| 3 |  |  Jogo de Sustentabilidade hídrica!  |\n");
         printf("-----  ---------------------------------------\n");
 
         scanf("%d", &jogo);
 			if(jogo==1)
-		jogo1();
+		        jogo1();
 			if(jogo==2)
-		jogo2();
+		        jogo3();
 			if(jogo==3)
-		jogo3();
-			if(jogo==4)
-		jogo4();
-			if(jogo==5)
-		printf("joguinhos finalizado");
+		        jogo4();
+		    if (jogo==0)
+		        printf("joguinhos finalizado");
 	}
 
 	return 0;
